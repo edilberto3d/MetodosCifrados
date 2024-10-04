@@ -1,0 +1,98 @@
+/* Fondo azul oscuro */
+.bg-dark-blue {
+    background-color: #003366; /* Azul oscuro */
+}
+
+/* Título con ícono */
+h1 i {
+    margin-right: 10px;
+    color: #ffc107; /* Dorado para el ícono */
+}
+
+h1 {
+    font-size: 3rem;
+    color: #ffc107; /* Color dorado para el texto del título */
+    display: inline-block;
+    margin-bottom: 20px; /* Ajustar margen inferior */
+}
+
+/* Centrado de los íconos en el menú */
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Asegurar que sea responsivo */
+}
+
+/* Menú con colores más llamativos */
+.navbar-nav .nav-link {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    line-height: 1.5;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, color 0.3s ease;
+    position: relative; /* Necesario para el pseudo-elemento */
+}
+
+/* Agregar triángulo en hover */
+.navbar-nav .nav-link:hover::after {
+    content: "";
+    position: absolute;
+    bottom: -15px; /* Posicionar el triángulo debajo del enlace */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid #ffc107; /* Color del triángulo en hover */
+}
+
+/* Cambiar el color del ícono a amarillo cuando se hace hover */
+.navbar-nav .nav-link:hover i {
+    color: #ffc107; /* Cambiar color del ícono a amarillo en hover */
+}
+
+/* Íconos blancos por defecto */
+.navbar-nav .nav-link i {
+    margin-bottom: 5px;
+    display: block;
+    font-size: 2.5rem; /* Tamaño del ícono */
+    color: white;
+}
+
+/* Mantener la opción seleccionada resaltada */
+.navbar-nav .nav-link.active i {
+    color: #ffc107; /* Solo el ícono cambia a amarillo cuando está activo */
+}
+
+/* Cambiar el color del ícono de hamburguesa a blanco */
+.navbar-toggler {
+    border: none; /* Eliminar el borde del botón si es necesario */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    /* El ícono de hamburguesa en blanco */
+}
+
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar-nav .nav-link {
+        width: 80px;
+        font-size: 0.8rem;
+    }
+
+    .navbar-nav .nav-link i {
+        font-size: 1.8rem; /* Reducir tamaño de los íconos en pantallas pequeñas */
+    }
+
+    .navbar-nav .nav-link:hover::after {
+        border-top: 12px solid #ffc107; /* Ajustar el tamaño del triángulo en pantallas pequeñas */
+    }
+}

@@ -1,0 +1,79 @@
+/* resources/css/styles.css */
+
+/* Ajustes para el encabezado */
+.bg-dark-blue {
+    background-color: #003366;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #ffc107;
+}
+
+/* Estilos generales para el pizarrón */
+.pizarron {
+    background-color: #4CAF50;
+    border: 5px solid #8B4513;
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    margin: 0 auto;
+}
+
+/* Ajustes para los íconos de hojas y el botón */
+#youtube-button-container {
+    margin-top: 20px;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+/* Ajustes para el menú de navegación */
+.navbar-nav .nav-link {
+    font-size: 1.2rem;
+}
+
+.navbar-nav .nav-link i {
+    display: block;
+    font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .pizarron {
+        max-width: 100%;
+        height: auto;
+    }
+
+    #show-youtube {
+        font-size: 0.8rem;
+        padding: 10px 20px;
+    }
+
+    #info-pizarron h2 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    #show-youtube {
+        font-size: 0.8rem;
+    }
+
+    #info-pizarron h2 {
+        font-size: 1.1rem;
+    }
+}
